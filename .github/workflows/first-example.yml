@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
         - name: welcome message 
-          run: echo"This is what my first github actions first job testing"
+          run: echo "This is what my first github actions first job testing"
 
 
         - name: List the files
