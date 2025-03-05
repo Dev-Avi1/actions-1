@@ -1,0 +1,15 @@
+name: my first workflow
+
+on: push
+
+jobs: 
+    first_job: 
+        runs-on: ubuntu-latest
+        steps:   
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+        - name: install the cowsay package
+          run: sudo apt-get install cowsay
+        - name: testing the cowsay commands
+          run: cowsay "Hello, world!"
+
