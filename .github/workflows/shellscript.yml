@@ -11,5 +11,3 @@ jobs:
 
         - name: Executing the shell script
           run: ./ascii-script.sh
-          
-        
