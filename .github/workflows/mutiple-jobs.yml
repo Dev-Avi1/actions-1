@@ -11,7 +11,7 @@ jobs:
 
         - name: installing and testing cowsay program
           run: |
-            apt-get install cowsay -y
+            sudo apt-get install cowsay -y
             cowsay -f dragon "Run for cover, I am a DRAGON.....RAWR" >> dragon.txt
             sleep 20
 
