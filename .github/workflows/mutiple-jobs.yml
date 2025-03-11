@@ -1,0 +1,33 @@
+name: Workflow with multiple jobs
+
+on: push
+
+jobs: 
+    Build_job_1: 
+        runs-on: ubuntu-latest
+        steps:   
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: installing and testing cowsay program
+          run: |
+            apt-get install cowsay -y
+            cowsay -f dragon "Run for cover, I am a DRAGON.....RAWR" >> dragon.txt
+            sleep 20
+
+
+    test_job_2:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Testing the file exists
+          run: |
+            sleep 10
+            grep -i "dragon" dragon.txt
+    
+    deploy_job_3:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: read the file
+          run: |
+           cat dragon.txt
+           echo "deploying ........"
