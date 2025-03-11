@@ -1,0 +1,14 @@
+name: my second workflow
+
+on: push
+
+jobs: 
+    first_job: 
+        runs-on: ubuntu-latest
+        steps:   
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Executing the shell script
+          run: ./ascii-script.sh  
+        
