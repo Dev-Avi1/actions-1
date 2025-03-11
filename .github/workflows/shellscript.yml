@@ -1,4 +1,4 @@
-name: my second workflow
+name: my Shell Script workflow
 
 on: push
 
